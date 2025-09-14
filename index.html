@@ -3,10 +3,85 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Лабораторна 1</title>
+	<title>Лабораторна 2 - Головна</title>
+	<meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги."/>
+	<link rel="icon" href="assets/images/favicon.ico"/>
 </head>
 <body>
-	<p>Студент: Зиков Олександр Вікторович</p>
-	<p>Група: 6.1213-2пі</p>
+	<a class="skip-link" href="#main">Перейти до основного контенту</a>
+
+	<header class="site-header">
+		<h1 id="site-title">Мій перший лендинг</h1>
+		<nav class="site-nav" aria-label="Головна навігація">
+			<ul>
+				<li><a href="index.html" aria-current="page">Головна</a></li>
+				<li><a href="about.html">Про нас</a></li>
+				<li><a href="contacts.html">Контакти</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main">
+		<article class="hero-article">
+			<header>
+				<h2>Новини</h2>
+			</header>
+			<p>Зиков Олександр Вікторович почав роботу над HTML-каркасом.</p>
+			<figure>
+				<img src="assets/images/Portrait_Placeholder.jpg" alt="Фото студента" width="640"/>
+				<figcaption>Це зображення для новини</figcaption>
+			</figure>
+		</article>
+
+		<section aria-labelledby="benefits-title" class="benefits">
+			<h3 id="benefits-title">Наші переваги</h3>
+			<ul class="advantages">
+				<li>Сучасні технології фронтенду</li>
+				<li>Командна робота та менторинг</li>
+				<li>Практика на реальних кейсах</li>
+			</ul>
+		</section>
+
+		<section aria-labelledby="services-title" class="services">
+			<h3 id="services-title">Наші послуги</h3>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Послуга</th>
+						<th scope="col">Опис</th>
+						<th scope="col">Ціна</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Розробка сайту</td>
+						<td>Лендінг або невеликий корпоративний сайт</td>
+						<td>500 $</td>
+					</tr>
+					<tr>
+						<td>SEO-оптимізація</td>
+						<td>Базовий аудит та покращення видимості</td>
+						<td>300 $</td>
+					</tr>
+					<tr>
+						<td>Підтримка</td>
+						<td>Оновлення та технічна допомога</td>
+						<td>100 $ / місяць</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	<aside class="sidebar" aria-label="Додаткова інформація">
+		<h3>Корисні посилання</h3>
+		<ul>
+			<li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+		</ul>
+	</aside>
+
+	<footer class="site-footer">
+		<p>© 2025 Група 6.1213-2пі</p>
+	</footer>
 </body>
 </html>
