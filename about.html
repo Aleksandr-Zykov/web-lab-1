@@ -6,62 +6,61 @@
 	<title>Лабораторна 2 - Про нас</title>
 	<meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги."/>
 	<link rel="icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-	<a class="skip-link" href="#main">Перейти до основного контенту</a>
+    <a class="skip-link" href="#main">Перейти до основного контенту</a>
 
-	<header class="site-header">
-		<h1 id="site-title">Мій перший лендинг</h1>
-		<nav class="site-nav" aria-label="Головна навігація">
-			<ul>
-				<li><a href="index.html">Головна</a></li>
-				<li><a href="about.html" aria-current="page">Про нас</a></li>
-				<li><a href="contacts.html">Контакти</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header class="header">
+        <h1 class="header__title">Мій перший лендинг</h1>
+        <nav class="navigation" aria-label="Головна навігація">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="index.html">Головна</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="about.html" aria-current="page">Про нас</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<main id="main">
-		<article class="about-intro">
-			<header>
-				<h2>Про нашу команду</h2>
-			</header>
-			<p>Ми - команда студентів, що створює навчальний веб-проєкт у межах курсу «Web-програмування (1 семестр)».</p>
-		</article>
+    <main id="main" class="main">
+        <section class="about-article">
+            <h2 class="about-article__title">Про нашу команду</h2>
+            <p class="about-article__text">Ми - команда студентів, що створює навчальний веб-проєкт у межах курсу «Web-програмування (1 семестр)».</p>
+        </section>
 
-		<section aria-labelledby="skills-title" class="skills">
-			<h3 id="skills-title">Наші навички</h3>
-			<ul>
-				<li>HTML, семантика, доступність</li>
-				<li>CSS, адаптивна верстка</li>
-				<li>JavaScript, робота з DOM</li>
-			</ul>
-		</section>
+        <section class="skills" aria-labelledby="skills-title">
+            <h3 id="skills-title" class="skills__title">Наші навички</h3>
+            <ul class="skills__list">
+                <li class="skills__item">HTML, семантика, доступність</li>
+                <li class="skills__item">CSS, адаптивна верстка</li>
+                <li class="skills__item">JavaScript, робота з DOM</li>
+            </ul>
+        </section>
 
-		<section aria-labelledby="history-title" class="history">
-			<h3 id="history-title">Історія</h3>
-			<dl>
-				<dt>2023</dt>
-				<dd>Перші навчальні проєкти</dd>
-				<dt>2024</dt>
-				<dd>Командні pet-проєкти та хакатони</dd>
-				<dt>2025</dt>
-				<dd>Запуск навчального лендінгу</dd>
-			</dl>
-		</section>
-	</main>
+        <section class="history" aria-labelledby="history-title">
+            <h3 id="history-title" class="history__title">Історія</h3>
+            <dl class="history__list">
+                <dt class="history__term">2023</dt>
+                <dd class="history__desc">Перші навчальні проєкти</dd>
+                <dt class="history__term">2024</dt>
+                <dd class="history__desc">Командні pet-проєкти та хакатони</dd>
+                <dt class="history__term">2025</dt>
+                <dd class="history__desc">Запуск навчального лендінгу</dd>
+            </dl>
+        </section>
+    </main>
 
-	<aside class="sidebar" aria-label="Додаткова інформація">
-		<h3>Цінності</h3>
-		<ul>
-			<li>Якість коду та прозорість</li>
-			<li>Навчання через практику</li>
-			<li>Комунікація та підтримка</li>
-		</ul>
-	</aside>
+    <aside class="sidebar sidebar--values" aria-label="Додаткова інформація">
+        <h3 class="sidebar__title">Цінності</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Якість коду та прозорість</li>
+            <li class="sidebar__item">Навчання через практику</li>
+            <li class="sidebar__item">Комунікація та підтримка</li>
+        </ul>
+    </aside>
 
-	<footer class="site-footer">
-		<p>© 2025 Група 6.1213-2пі</p>
-	</footer>
+    <footer class="footer">
+        <p>© 2025 Група 6.1213-2пі</p>
+    </footer>
 </body>
 </html>

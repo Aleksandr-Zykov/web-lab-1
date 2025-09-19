@@ -6,101 +6,95 @@
 	<title>Лабораторна 2 - Контакти</title>
 	<meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги."/>
 	<link rel="icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-	<a class="skip-link" href="#main">Перейти до основного контенту</a>
+    <a class="skip-link" href="#main">Перейти до основного контенту</a>
 
-	<header class="site-header">
-		<h1 id="site-title">Мій перший лендинг</h1>
-		<nav class="site-nav" aria-label="Головна навігація">
-			<ul>
-				<li><a href="index.html">Головна</a></li>
-				<li><a href="about.html">Про нас</a></li>
-				<li><a href="contacts.html" aria-current="page">Контакти</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header class="header">
+        <h1 class="header__title">Мій перший лендинг</h1>
+        <nav class="navigation" aria-label="Головна навігація">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="index.html">Головна</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="about.html">Про нас</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="contacts.html" aria-current="page">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<main id="main">
-		<h2>Зв'яжіться з нами</h2>
+    <main id="main" class="main">
+        <h2 class="main__title">Зв'яжіться з нами</h2>
 
-		<form action="#" method="post" class="contact-form" aria-labelledby="contact-form-title">
-			<h3 id="contact-form-title">Форма зворотного зв'язку</h3>
+        <form class="contact-form" action="#" method="post">
+            <div class="contact-form__item">
+                <label for="name" class="contact-form__label">Ім'я</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ваше ім'я"
+                    required
+                    minlength="2"
+                    maxlength="50"
+                    pattern="^[A-Яа-яЇїІіЄєҐґA-Za-z\s\-']+$"
+                    title="Ім'я може містити лише літери, апостроф або дефіс"
+                    class="contact-form__input"
+                />
+            </div>
+            <div class="contact-form__item">
+                <label for="email" class="contact-form__label">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Ваш email"
+                    required
+                    class="contact-form__input"
+                />
+            </div>
+            <div class="contact-form__item">
+                <label for="phone" class="contact-form__label">Телефон</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+380XXXXXXXXX"
+                    required
+                    pattern="^(\+?38)?\s?0\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$"
+                    title="Введіть номер у форматі +380XXXXXXXXX"
+                    class="contact-form__input"
+                />
+            </div>
+            <div class="contact-form__item">
+                <label for="msg" class="contact-form__label">Повідомлення</label>
+                <textarea
+                    id="msg"
+                    name="msg"
+                    placeholder="Ваше повідомлення"
+                    rows="5"
+                    required
+                    minlength="10"
+                    maxlength="500"
+                    class="contact-form__textarea"
+                ></textarea>
+            </div>
 
-			<div class="form-row">
-				<label for="name">Ім'я</label>
-				<input
-				type="text"
-				id="name"
-				name="name"
-				placeholder="Ваше ім'я"
-				required
-				minlength="2"
-				maxlength="50"
-				pattern="^[A-Яа-яЇїІіЄєҐґA-Za-z\s\-']+$"
-				title="Ім'я може містити лише літери, апостроф або дефіс"
-				/>
-			</div>
-			<div class="form-row">
-				<label for="email">Email</label>
-				<input
-				type="email"
-				id="email"
-				name="email"
-				placeholder="Ваш email"
-				required
-				/>
-			</div>
-			<div class="form-row">
-				<label for="phone">Телефон</label>
-				<input
-				type="tel"
-				id="phone"
-				name="phone"
-				placeholder="+380XXXXXXXXX"
-				required
-				pattern="^(\+?38)?\s?0\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$"
-				title="Введіть номер у форматі +380XXXXXXXXX"
-				/>
-			</div>
-			<div class="form-row">
-				<label for="msg">Повідомлення</label>
-				<textarea
-				id="msg"
-				name="msg"
-				placeholder="Ваше повідомлення"
-				rows="5"
-				required
-				minlength="10"
-				maxlength="500"
-				></textarea>
-			</div>
-
-			<button type="submit">Надіслати</button>
-		</form>
-
-        <section aria-labelledby="contacts-title" class="contacts-block">
-            <h3 id="contacts-title">Наші контакти</h3>
-            <address>
-                <p>Email: <a href="mailto:zich200877@gmail.com">zich200877@gmail.com</a></p>
-                <p>Телефон: <a href="tel:+380509334101">+38 (050) 933-41-01</a></p>
-                <p>Адреса: м. Запоріжжя, вул. Університетська, 65</p>
-            </address>
-        </section>
+            <button type="submit" class="contact-form__button">Надіслати</button>
+        </form>
 
     </main>
 
-    <aside class="sidebar" aria-label="Додаткова інформація">
-        <h3>Соціальні мережі</h3>
-        <ul>
-            <li><a href="#" aria-label="Ми у Facebook">Facebook</a></li>
-            <li><a href="#" aria-label="Ми у Instagram">Instagram</a></li>
-            <li><a href="#" aria-label="Ми у LinkedIn">LinkedIn</a></li>
+    <aside class="sidebar sidebar--social" aria-label="Додаткова інформація">
+        <h3 class="sidebar__title">Соціальні мережі</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Facebook">Facebook</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Instagram">Instagram</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у LinkedIn">LinkedIn</a></li>
         </ul>
     </aside>
 
-	<footer class="site-footer">
-		<p>© 2025 Група 6.1213-2пі</p>
-	</footer>
+    <footer class="footer">
+        <p>© 2025 Група 6.1213-2пі</p>
+    </footer>
 </body>
 </html>

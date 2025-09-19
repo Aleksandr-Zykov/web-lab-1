@@ -6,82 +6,81 @@
 	<title>Лабораторна 2 - Головна</title>
 	<meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги."/>
 	<link rel="icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-	<a class="skip-link" href="#main">Перейти до основного контенту</a>
+    <a class="skip-link" href="#main">Перейти до основного контенту</a>
 
-	<header class="site-header">
-		<h1 id="site-title">Мій перший лендинг</h1>
-		<nav class="site-nav" aria-label="Головна навігація">
-			<ul>
-				<li><a href="index.html" aria-current="page">Головна</a></li>
-				<li><a href="about.html">Про нас</a></li>
-				<li><a href="contacts.html">Контакти</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header class="header">
+        <h1 class="header__title">Мій перший лендинг</h1>
+        <nav class="navigation" aria-label="Головна навігація">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="index.html" class="navigation__link" aria-current="page">Головна</a></li>
+                <li class="navigation__item"><a href="about.html" class="navigation__link">Про нас</a></li>
+                <li class="navigation__item"><a href="contacts.html" class="navigation__link">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<main id="main">
-		<article class="hero-article">
-			<header>
-				<h2>Новини</h2>
-			</header>
-			<p>Зиков Олександр Вікторович почав роботу над HTML-каркасом.</p>
-			<figure>
-				<img src="assets/images/Portrait_Placeholder.jpg" alt="Фото студента" width="640"/>
-				<figcaption>Це зображення для новини</figcaption>
-			</figure>
-		</article>
+    <main id="main" class="main">
+        <article class="article">
+            <h2 class="article__title">Новини</h2>
+            <p class="article__text">Зиков Олександр Вікторович почав роботу над HTML-каркасом.</p>
+            <figure class="media article__media media--framed">
+                <img class="media__image" src="assets/images/Portrait_Placeholder.jpg" alt="Фото студента" width="640"/>
+                <figcaption class="media__caption">Це зображення для новини</figcaption>
+            </figure>
+        </article>
 
-		<section aria-labelledby="benefits-title" class="benefits">
-			<h3 id="benefits-title">Наші переваги</h3>
-			<ul class="advantages">
-				<li>Сучасні технології фронтенду</li>
-				<li>Командна робота та менторинг</li>
-				<li>Практика на реальних кейсах</li>
-			</ul>
-		</section>
+        <section class="benefits" aria-labelledby="benefits-title">
+            <h3 id="benefits-title" class="benefits__title">Наші переваги</h3>
+            <ul class="benefits__list">
+                <li class="benefits__item">Сучасні технології фронтенду</li>
+                <li class="benefits__item">Командна робота та менторинг</li>
+                <li class="benefits__item">Практика на реальних кейсах</li>
+            </ul>
+        </section>
 
-		<section aria-labelledby="services-title" class="services">
-			<h3 id="services-title">Наші послуги</h3>
-			<table>
-				<thead>
-					<tr>
-						<th scope="col">Послуга</th>
-						<th scope="col">Опис</th>
-						<th scope="col">Ціна</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Розробка сайту</td>
-						<td>Лендінг або невеликий корпоративний сайт</td>
-						<td>500 $</td>
-					</tr>
-					<tr>
-						<td>SEO-оптимізація</td>
-						<td>Базовий аудит та покращення видимості</td>
-						<td>300 $</td>
-					</tr>
-					<tr>
-						<td>Підтримка</td>
-						<td>Оновлення та технічна допомога</td>
-						<td>100 $ / місяць</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
-	</main>
+        <section class="services" aria-labelledby="services-title">
+            <h3 id="services-title" class="services__title">Наші послуги</h3>
+            <table class="services__table">
+                <thead>
+                    <tr class="services__row">
+                        <th scope="col" class="services__header">Послуга</th>
+                        <th scope="col" class="services__header">Опис</th>
+                        <th scope="col" class="services__header">Ціна</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="services__row">
+                        <td class="services__cell">Розробка сайту</td>
+                        <td class="services__cell">Лендінг або невеликий корпоративний сайт</td>
+                        <td class="services__cell">500 $</td>
+                    </tr>
+                    <tr class="services__row">
+                        <td class="services__cell">SEO-оптимізація</td>
+                        <td class="services__cell">Базовий аудит та покращення видимості</td>
+                        <td class="services__cell">300 $</td>
+                    </tr>
+                    <tr class="services__row">
+                        <td class="services__cell">Підтримка</td>
+                        <td class="services__cell">Оновлення та технічна допомога</td>
+                        <td class="services__cell">100 $ / місяць</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-	<aside class="sidebar" aria-label="Додаткова інформація">
-		<h3>Корисні посилання</h3>
-		<ul>
-			<li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-		</ul>
-	</aside>
+    <aside class="sidebar sidebar--links" aria-label="Додаткова інформація">
+        <h3 class="sidebar__title">Корисні посилання</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+        </ul>
+    </aside>
 
-	<footer class="site-footer">
-		<p>© 2025 Група 6.1213-2пі</p>
-	</footer>
+    <footer class="footer">
+        <p>© 2025 Група 6.1213-2пі</p>
+    </footer>
 </body>
 </html>
