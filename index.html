@@ -1,86 +1,120 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Лабораторна 2 - Головна</title>
-	<meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги."/>
-	<link rel="icon" href="assets/images/favicon.ico"/>
-    <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторна 4 - Головна</title>
+  <meta name="description" content="Головна сторінка навчального лендінгу з новинами, побудована на Flexbox та Grid." />
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <a class="skip-link" href="#main">Перейти до основного контенту</a>
-
+  <a class="skip-link" href="#main">Перейти до основного контенту</a>
+  <div class="layout">
     <header class="header">
-        <h1 class="header__title">Мій перший лендинг</h1>
-        <nav class="navigation" aria-label="Головна навігація">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="index.html" class="navigation__link" aria-current="page">Головна</a></li>
-                <li class="navigation__item"><a href="about.html" class="navigation__link">Про нас</a></li>
-                <li class="navigation__item"><a href="contacts.html" class="navigation__link">Контакти</a></li>
-            </ul>
-        </nav>
+      <h1 class="header__title">Лабораторна № 4</h1>
+      <nav class="nav" aria-label="Головна навігація">
+        <a href="index.html" class="nav__link" aria-current="page">Головна</a>
+        <a href="about.html" class="nav__link">Про нас</a>
+        <a href="contacts.html" class="nav__link nav__link--cta">Контакти</a>
+      </nav>
     </header>
 
-    <main id="main" class="main">
-        <article class="article">
-            <h2 class="article__title">Новини</h2>
-            <p class="article__text">Зиков Олександр Вікторович почав роботу над HTML-каркасом.</p>
-            <figure class="media article__media media--framed">
-                <img class="media__image" src="assets/images/Portrait_Placeholder.jpg" alt="Фото студента" width="640"/>
-                <figcaption class="media__caption">Це зображення для новини</figcaption>
-            </figure>
-        </article>
-
-        <section class="benefits" aria-labelledby="benefits-title">
-            <h3 id="benefits-title" class="benefits__title">Наші переваги</h3>
-            <ul class="benefits__list">
-                <li class="benefits__item">Сучасні технології фронтенду</li>
-                <li class="benefits__item">Командна робота та менторинг</li>
-                <li class="benefits__item">Практика на реальних кейсах</li>
-            </ul>
-        </section>
-
-        <section class="services" aria-labelledby="services-title">
-            <h3 id="services-title" class="services__title">Наші послуги</h3>
-            <table class="services__table">
-                <thead>
-                    <tr class="services__row">
-                        <th scope="col" class="services__header">Послуга</th>
-                        <th scope="col" class="services__header">Опис</th>
-                        <th scope="col" class="services__header">Ціна</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="services__row">
-                        <td class="services__cell">Розробка сайту</td>
-                        <td class="services__cell">Лендінг або невеликий корпоративний сайт</td>
-                        <td class="services__cell">500 $</td>
-                    </tr>
-                    <tr class="services__row">
-                        <td class="services__cell">SEO-оптимізація</td>
-                        <td class="services__cell">Базовий аудит та покращення видимості</td>
-                        <td class="services__cell">300 $</td>
-                    </tr>
-                    <tr class="services__row">
-                        <td class="services__cell">Підтримка</td>
-                        <td class="services__cell">Оновлення та технічна допомога</td>
-                        <td class="services__cell">100 $ / місяць</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-
-    <aside class="sidebar sidebar--links" aria-label="Додаткова інформація">
+    <aside class="sidenav" aria-label="Додатковий контент">
+      <section class="sidebar sidebar--links" aria-label="Корисні посилання">
         <h3 class="sidebar__title">Корисні посилання</h3>
         <ul class="sidebar__list">
-            <li class="sidebar__item"><a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="https://web.dev/" target="_blank" rel="noopener noreferrer">web.dev</a>
+          </li>
         </ul>
+      </section>
+      <section class="sidebar sidebar--values" aria-label="Цінності">
+        <h3 class="sidebar__title">Цінності</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">Якість коду та прозорість</li>
+          <li class="sidebar__item">Навчання через практику</li>
+          <li class="sidebar__item">Комунікація та підтримка</li>
+        </ul>
+      </section>
+      <section class="sidebar sidebar--social" aria-label="Соціальні мережі">
+        <h3 class="sidebar__title">Соціальні мережі</h3>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Facebook">Facebook</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Instagram">Instagram</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у LinkedIn">LinkedIn</a></li>
+        </ul>
+      </section>
     </aside>
 
+    <main id="main" class="main">
+      <section class="news" aria-labelledby="news-title">
+        <h2 id="news-title" class="news__title">Останні новини</h2>
+        <div class="news__list">
+          <article class="news-card">
+            <figure class="news-card__media media">
+              <img class="media__img" src="assets/images/Portrait_Placeholder.jpg" alt="Фото зі студентського заходу" loading="lazy" decoding="async" />
+            </figure>
+            <h3 class="news-card__title">Старт навчального веб-проєкту</h3>
+            <p class="news-card__excerpt">Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JavaScript та сучасні фреймворки.</p>
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2025-09-10">10 вер 2025</time>
+              <a class="news-card__btn" href="#">Читати далі</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <figure class="news-card__media media">
+              <img class="media__img" src="assets/images/Portrait_Placeholder.jpg" alt="Практика з Flexbox та Grid" loading="lazy" decoding="async" />
+            </figure>
+            <h3 class="news-card__title">Flexbox та Grid: практика</h3>
+            <p class="news-card__excerpt">На четвертій лекції розбираємо одновимірні та двовимірні лейаути й будуємо цілісний шаблон сторінки.</p>
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2025-09-12">12 вер 2025</time>
+              <a class="news-card__btn" href="#">Читати далі</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <figure class="news-card__media media">
+              <img class="media__img" src="assets/images/Portrait_Placeholder.jpg" alt="Огляд React" loading="lazy" decoding="async" />
+            </figure>
+            <h3 class="news-card__title">React у навчальній програмі</h3>
+            <p class="news-card__excerpt">Після базових тем переходимо до екосистеми React та розробляємо перший компонентний інтерфейс.</p>
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2025-09-15">15 вер 2025</time>
+              <a class="news-card__btn" href="#">Читати далі</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer">
-        <p>© 2025 Група 6.1213-2пі</p>
+      <div class="footer__inner">
+        <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-2пі</span></p>
+        <address class="footer__contacts" aria-label="Наші контакти">
+          <h3 class="footer__contacts-title">Наші контакти</h3>
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <span class="footer__label">Email:</span>
+              <a class="footer__link" href="mailto:web-team@example.com">web-team@example.com</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">Телефон:</span>
+              <a class="footer__link" href="tel:+380501112233">+38 (050) 111-22-33</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__label">Адреса:</span>
+              <span>Запоріжжя, вул. Університетська, 66Б</span>
+            </li>
+          </ul>
+        </address>
+      </div>
     </footer>
+  </div>
 </body>
 </html>
