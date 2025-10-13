@@ -1,106 +1,34 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Лабораторна 5 - Про нас</title>
-  <meta name="description" content="Інформація про команду, її навички та історію розвитку в рамках лабораторної роботи №5." />
-  <link rel="icon" href="assets/images/favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <a class="skip-link" href="#main">Перейти до основного контенту</a>
-  <div class="layout">
-    <header class="header">
-      <h1 class="header__title">Лабораторна № 5</h1>
-      <nav class="nav" aria-label="Головна навігація">
-        <a href="index.html" class="nav__link">Головна</a>
-        <a href="about.html" class="nav__link" aria-current="page">Про нас</a>
-        <a href="contacts.html" class="nav__link nav__link--cta">Контакти</a>
-      </nav>
-    </header>
+{{#> layout
+  pageTitle="Про нас"
+  pageDescription="Інформація про команду, її навички та історію розвитку."
+  studentGroup="6.1213-2пі"
+  studentEmail="web-team@example.com"
+  isAboutPage=true
+}}
+  <article class="about-article">
+    <h2 class="about-article__title">Про нашу команду</h2>
+    <p class="about-article__text">Ми — команда студентів курсу «Web-програмування (1 семестр)», що розвиває навчальний веб-проєкт та практикує сучасні фронтенд-технології.</p>
+  </article>
 
-    <aside class="sidenav" aria-label="Додатковий контент">
-      <section class="sidebar sidebar--links" aria-label="Корисні посилання">
-        <h3 class="sidebar__title">Корисні посилання</h3>
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
-          </li>
-          <li class="sidebar__item">
-            <a class="sidebar__link" href="https://web.dev/" target="_blank" rel="noopener noreferrer">web.dev</a>
-          </li>
-        </ul>
-      </section>
-      <section class="sidebar sidebar--values" aria-label="Цінності">
-        <h3 class="sidebar__title">Цінності</h3>
-        <ul class="sidebar__list">
-          <li class="sidebar__item">Якість коду та прозорість</li>
-          <li class="sidebar__item">Навчання через практику</li>
-          <li class="sidebar__item">Комунікація та підтримка</li>
-        </ul>
-      </section>
-      <section class="sidebar sidebar--social" aria-label="Соціальні мережі">
-        <h3 class="sidebar__title">Соціальні мережі</h3>
-        <ul class="sidebar__list">
-          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Facebook">Facebook</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Instagram">Instagram</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у LinkedIn">LinkedIn</a></li>
-        </ul>
-      </section>
-    </aside>
+  <section class="skills" aria-labelledby="skills-title">
+    <h3 id="skills-title" class="skills__title">Наші навички</h3>
+    <ul class="skills__list">
+      <li class="skills__item">HTML та семантична розмітка</li>
+      <li class="skills__item">CSS, адаптивні сітки на Flexbox і Grid</li>
+      <li class="skills__item">JavaScript та робота з DOM</li>
+      <li class="skills__item">Git, командна робота, код-рев'ю</li>
+    </ul>
+  </section>
 
-    <main id="main" class="main">
-      <article class="about-article">
-        <h2 class="about-article__title">Про нашу команду</h2>
-        <p class="about-article__text">Ми — команда студентів курсу «Web-програмування (1 семестр)», що розвиває навчальний веб-проєкт та практикує сучасні фронтенд-технології.</p>
-      </article>
-
-      <section class="skills" aria-labelledby="skills-title">
-        <h3 id="skills-title" class="skills__title">Наші навички</h3>
-        <ul class="skills__list">
-          <li class="skills__item">HTML та семантична розмітка</li>
-          <li class="skills__item">CSS, адаптивні сітки на Flexbox і Grid</li>
-          <li class="skills__item">JavaScript та робота з DOM</li>
-          <li class="skills__item">Git, командна робота, код-рев'ю</li>
-        </ul>
-      </section>
-
-      <section class="history" aria-labelledby="history-title">
-        <h3 id="history-title" class="history__title">Історія</h3>
-        <dl class="history__list">
-          <dt class="history__term">2023</dt>
-          <dd class="history__desc">Перші навчальні проєкти та основи HTML/CSS</dd>
-          <dt class="history__term">2024</dt>
-          <dd class="history__desc">Практика в командних pet-проєктах</dd>
-          <dt class="history__term">2025</dt>
-          <dd class="history__desc">Запуск навчального лендінгу в межах дисципліни</dd>
-        </dl>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-2пі</span></p>
-        <address class="footer__contacts" aria-label="Наші контакти">
-          <h3 class="footer__contacts-title">Наші контакти</h3>
-          <ul class="footer__contacts-list">
-            <li class="footer__contacts-item">
-              <span class="footer__label">Email:</span>
-              <a class="footer__link" href="mailto:web-team@example.com">web-team@example.com</a>
-            </li>
-            <li class="footer__contacts-item">
-              <span class="footer__label">Телефон:</span>
-              <a class="footer__link" href="tel:+380501112233">+38 (050) 111-22-33</a>
-            </li>
-            <li class="footer__contacts-item">
-              <span class="footer__label">Адреса:</span>
-              <span>Запоріжжя, вул. Університетська, 66Б</span>
-            </li>
-          </ul>
-        </address>
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
+  <section class="history" aria-labelledby="history-title">
+    <h3 id="history-title" class="history__title">Історія</h3>
+    <dl class="history__list">
+      <dt class="history__term">2023</dt>
+      <dd class="history__desc">Перші навчальні проєкти та основи HTML/CSS</dd>
+      <dt class="history__term">2024</dt>
+      <dd class="history__desc">Практика в командних pet-проєктах</dd>
+      <dt class="history__term">2025</dt>
+      <dd class="history__desc">Запуск навчального лендінгу в межах дисципліни</dd>
+    </dl>
+  </section>
+{{/layout}}

@@ -1,0 +1,29 @@
+@use '../abstracts' as abs;
+
+.skills {
+  @include abs.card(abs.$space-6);
+}
+
+.skills__title {
+  margin: 0 0 abs.$space-3;
+  font-size: 1.25rem;
+}
+
+.skills__list {
+  display: grid;
+  gap: abs.$space-2;
+}
+
+.skills__item {
+  background: var(--brand-100);
+  border-radius: abs.$radius-1;
+  padding: abs.$space-2 abs.$space-3;
+  color: var(--brand-600);
+  font-weight: 600;
+}
+
+@include abs.respond(abs.$breakpoint-md) {
+  .skills__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

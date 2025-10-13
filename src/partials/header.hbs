@@ -1,0 +1,8 @@
+<header class="header">
+  <h1 class="header__title">{{ labName }}</h1>
+  <nav class="nav" aria-label="Головна навігація">
+    <a href="/index.html" class="nav__link" {{#if isHomePage}}aria-current="page"{{/if}}>Головна</a>
+    <a href="/about.html" class="nav__link" {{#if isAboutPage}}aria-current="page"{{/if}}>Про нас</a>
+    <a href="/contacts.html" class="nav__link nav__link--cta" {{#if isContactsPage}}aria-current="page"{{/if}}>Контакти</a>
+  </nav>
+</header>

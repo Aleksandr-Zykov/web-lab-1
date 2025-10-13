@@ -1,0 +1,14 @@
+@use '../abstracts' as abs;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-size: var(--fs-body);
+  color: var(--fg);
+  background: var(--bg);
+  font-family: abs.$font-family-base;
+  line-height: 1.6;
+}

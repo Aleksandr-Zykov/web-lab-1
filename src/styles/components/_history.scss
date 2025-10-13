@@ -1,0 +1,32 @@
+@use '../abstracts' as abs;
+
+.history {
+  @include abs.card(abs.$space-6);
+}
+
+.history__title {
+  margin: 0 0 abs.$space-4;
+  font-size: 1.25rem;
+}
+
+.history__list {
+  display: grid;
+  gap: abs.$space-3;
+  margin: 0;
+}
+
+.history__term {
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.history__desc {
+  margin: 0;
+  color: var(--fg-muted);
+}
+
+@include abs.respond(abs.$breakpoint-md) {
+  .history__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

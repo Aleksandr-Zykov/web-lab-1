@@ -1,0 +1,46 @@
+@use '../abstracts' as abs;
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'sidenav'
+    'main'
+    'footer';
+  min-height: 100dvh;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@include abs.respond(abs.$breakpoint-sm) {
+  .layout {
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      'header header'
+      'sidenav main'
+      'footer footer';
+  }
+}
+
+@include abs.respond(abs.$breakpoint-lg) {
+  .layout {
+    grid-template-columns: 280px 1fr;
+  }
+}
