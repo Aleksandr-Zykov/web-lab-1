@@ -1,0 +1,26 @@
+@use 'sass:meta';
+@use './variables' as vars;
+
+@mixin card($padding: vars.$space-4) {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: vars.$radius-2;
+  padding: $padding;
+  box-shadow: var(--shadow-1);
+}
+
+@mixin transition($props: background, $duration: 0.2s, $timing: ease) {
+  $resolved: if(meta.type-of($props) == 'list', meta.inspect($props), $props);
+  transition: #{$resolved} $duration $timing;
+}
+
+@mixin focus-ring($color: vars.$color-brand) {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba($color, 0.15);
+}
+
+@mixin respond($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

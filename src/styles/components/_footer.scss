@@ -1,0 +1,86 @@
+@use '../abstracts' as abs;
+
+.footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: abs.$space-6 abs.$space-4;
+}
+
+.footer__inner {
+  display: grid;
+  gap: abs.$space-4;
+  grid-template-columns: 1fr;
+  align-items: start;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--fg-muted);
+  order: 2;
+}
+
+.footer__group-name {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.footer__contacts {
+  font-style: normal;
+  border: 1px solid var(--border);
+  border-radius: abs.$radius-2;
+  padding: abs.$space-4;
+  box-shadow: var(--shadow-1);
+}
+
+.footer__contacts-title {
+  margin: 0 0 abs.$space-3;
+  font-size: 1.05rem;
+  color: var(--brand);
+}
+
+.footer__contacts-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contacts-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem abs.$space-2;
+  align-items: baseline;
+}
+
+.footer__label {
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+
+.footer__link {
+  color: var(--brand);
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  text-decoration: underline;
+}
+
+@include abs.respond(abs.$breakpoint-sm) {
+  .footer__inner {
+    grid-template-columns: 1fr minmax(220px, 1fr);
+  }
+
+  .footer__text {
+    order: initial;
+  }
+}
+
+@include abs.respond(abs.$breakpoint-lg) {
+  .footer__inner {
+    grid-template-columns: 1fr minmax(280px, 1fr);
+  }
+}

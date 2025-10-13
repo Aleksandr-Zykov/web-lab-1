@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+@function rem($value, $base: 16) {
+  $unit: math.unit($value);
+
+  @if $unit == 'rem' or $unit == 'em' {
+    @return $value;
+  }
+
+  @return math.div($value, $base) * 1rem;
+}

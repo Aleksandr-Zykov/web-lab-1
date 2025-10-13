@@ -1,0 +1,16 @@
+@use '../abstracts' as abs;
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: abs.$space-2 abs.$space-4;
+  background: abs.$color-brand;
+  color: #fff;
+  border-radius: 0 abs.$radius-1 abs.$radius-1 0;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  left: 0;
+}

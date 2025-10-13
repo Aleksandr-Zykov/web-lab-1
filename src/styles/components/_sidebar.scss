@@ -1,0 +1,66 @@
+@use '../abstracts' as abs;
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  gap: abs.$space-6;
+  padding: abs.$space-6 abs.$space-4;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar {
+  @include abs.card(abs.$space-4);
+}
+
+.sidebar__title {
+  margin: 0 0 abs.$space-3;
+  font-size: abs.rem(18);
+  color: var(--brand);
+}
+
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: abs.rem(8);
+}
+
+.sidebar__item {
+  color: var(--fg);
+}
+
+.sidebar__link {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.sidebar--links .sidebar__item,
+.sidebar--values .sidebar__item,
+.sidebar--social .sidebar__item {
+  padding-left: abs.$space-3;
+}
+
+.sidebar--links .sidebar__item {
+  border-left: 4px solid var(--brand);
+}
+
+.sidebar--values .sidebar__item {
+  border-left: 4px solid abs.$color-accent-green;
+}
+
+.sidebar--social .sidebar__item {
+  border-left: 4px solid abs.$color-accent-blue;
+}
+
+@include abs.respond(abs.$breakpoint-sm) {
+  .sidenav {
+    border-right: 1px solid var(--border);
+    border-bottom: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidebar {
+    background: var(--surface);
+  }
+}

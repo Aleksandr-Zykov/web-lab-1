@@ -1,0 +1,22 @@
+@use '../abstracts' as abs;
+
+.main {
+  padding: abs.$space-6 abs.$space-4;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: abs.$space-8;
+}
+
+.main__title {
+  margin: 0;
+  font-size: var(--fs-h2);
+  color: var(--brand);
+}
+
+@include abs.respond(abs.$breakpoint-sm) {
+  .main {
+    padding: abs.$space-8 abs.$space-6;
+  }
+}

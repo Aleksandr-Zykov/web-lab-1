@@ -1,0 +1,59 @@
+@use '../abstracts' as abs;
+
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-1);
+}
+
+.header__title {
+  margin: 0;
+  padding: abs.$space-4 abs.$space-4 0;
+  font-size: var(--fs-h1);
+  color: var(--brand);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: abs.$space-3;
+  padding: abs.$space-3 abs.$space-4;
+  border-top: 1px solid var(--border);
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: abs.rem(4);
+  padding: abs.$space-2 abs.$space-3;
+  border-radius: abs.$radius-1;
+  color: var(--fg);
+  font-weight: 600;
+  @include abs.transition((background, color));
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  background: var(--brand-100);
+}
+
+.nav__link[aria-current='page'] {
+  color: var(--brand);
+  background: rgba(0, 43, 92, 0.08);
+}
+
+.nav__link--cta {
+  margin-left: auto;
+}
+
+@include abs.respond(abs.$breakpoint-sm) {
+  .header__title {
+    padding: abs.$space-4 abs.$space-6 0;
+  }
+
+  .nav {
+    flex-wrap: nowrap;
+    padding: abs.$space-3 abs.$space-6 abs.$space-4;
+  }
+}

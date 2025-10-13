@@ -1,0 +1,42 @@
+@use '../abstracts' as abs;
+
+:root {
+  --brand: #{abs.$color-brand};
+  --brand-600: #{abs.$color-brand-600};
+  --brand-100: #{abs.$color-brand-100};
+  --fg: #{abs.$color-fg};
+  --fg-muted: #{abs.$color-fg-muted};
+  --bg: #{abs.$color-bg};
+  --surface: #{abs.$color-surface};
+  --border: #{abs.$color-border};
+  --space-1: #{abs.$space-1};
+  --space-2: #{abs.$space-2};
+  --space-3: #{abs.$space-3};
+  --space-4: #{abs.$space-4};
+  --space-6: #{abs.$space-6};
+  --space-8: #{abs.$space-8};
+  --radius-1: #{abs.$radius-1};
+  --radius-2: #{abs.$radius-2};
+  --shadow-1: #{abs.$shadow-1};
+  --container: #{abs.$container-width};
+  --fs-body: clamp(1rem, 0.94rem + 0.5vw, 1.125rem);
+  --fs-h2: clamp(1.25rem, 1.05rem + 1.2vw, 1.6rem);
+  --fs-h1: clamp(1.6rem, 1.2rem + 2.2vw, 2.2rem);
+  --c-primary: var(--brand);
+  --c-primary-600: var(--brand-600);
+  --c-surface: var(--surface);
+  --c-border: var(--border);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1020;
+    --surface: #101528;
+    --fg: #e7eaf3;
+    --fg-muted: #b7bfd3;
+    --border: #232a3b;
+    --brand: #7fb3ff;
+    --brand-600: #6aa2f0;
+    --brand-100: #17233b;
+  }
+}

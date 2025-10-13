@@ -1,132 +1,60 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Лабораторна 5 - Головна</title>
-  <meta name="description" content="Головна сторінка навчального лендінгу з новинами для лабораторної роботи №5." />
-  <link rel="icon" href="assets/images/favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <a class="skip-link" href="#main">Перейти до основного контенту</a>
-  <div class="layout">
-    <header class="header">
-      <h1 class="header__title">Лабораторна № 5</h1>
-      <nav class="nav" aria-label="Головна навігація">
-        <a href="index.html" class="nav__link" aria-current="page">Головна</a>
-        <a href="about.html" class="nav__link">Про нас</a>
-        <a href="contacts.html" class="nav__link nav__link--cta">Контакти</a>
-      </nav>
-    </header>
-
-    <aside class="sidenav" aria-label="Додатковий контент">
-      <section class="sidebar sidebar--links" aria-label="Корисні посилання">
-        <h3 class="sidebar__title">Корисні посилання</h3>
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
-          </li>
-          <li class="sidebar__item">
-            <a class="sidebar__link" href="https://web.dev/" target="_blank" rel="noopener noreferrer">web.dev</a>
-          </li>
-        </ul>
-      </section>
-      <section class="sidebar sidebar--values" aria-label="Цінності">
-        <h3 class="sidebar__title">Цінності</h3>
-        <ul class="sidebar__list">
-          <li class="sidebar__item">Якість коду та прозорість</li>
-          <li class="sidebar__item">Навчання через практику</li>
-          <li class="sidebar__item">Комунікація та підтримка</li>
-        </ul>
-      </section>
-      <section class="sidebar sidebar--social" aria-label="Соціальні мережі">
-        <h3 class="sidebar__title">Соціальні мережі</h3>
-        <ul class="sidebar__list">
-          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Facebook">Facebook</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у Instagram">Instagram</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Ми у LinkedIn">LinkedIn</a></li>
-        </ul>
-      </section>
-    </aside>
-
-    <main id="main" class="main">
-      <section class="news" aria-labelledby="news-title">
-        <h2 id="news-title" class="news__title">Останні новини</h2>
-        <div class="news__list">
-          <article class="news-card">
-            <figure class="news-card__media media">
-              <picture>
-                <source type="image/avif" srcset="assets/images/placeholder.avif">
-                <source type="image/webp" srcset="assets/images/placeholder.webp">
-                <img class="media__img" src="assets/images/placeholder.jpg" alt="Фото зі студентського заходу" width="640" height="360" loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <h3 class="news-card__title">Старт навчального веб-проєкту</h3>
-            <p class="news-card__excerpt">Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JavaScript та сучасні фреймворки.</p>
-            <div class="news-card__meta">
-              <time class="news-card__date" datetime="2025-09-10">10 вер 2025</time>
-              <a class="news-card__btn" href="#">Читати далі</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <figure class="news-card__media media">
-              <picture>
-                <source type="image/avif" srcset="assets/images/placeholder.avif">
-                <source type="image/webp" srcset="assets/images/placeholder.webp">
-                <img class="media__img" src="assets/images/placeholder.jpg" alt="Практика з Flexbox та Grid" width="640" height="360" loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <h3 class="news-card__title">Flexbox та Grid: практика</h3>
-            <p class="news-card__excerpt">На четвертій лекції розбираємо одновимірні та двовимірні лейаути й будуємо цілісний шаблон сторінки.</p>
-            <div class="news-card__meta">
-              <time class="news-card__date" datetime="2025-09-12">12 вер 2025</time>
-              <a class="news-card__btn" href="#">Читати далі</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <figure class="news-card__media media">
-              <picture>
-                <source type="image/avif" srcset="assets/images/placeholder.avif">
-                <source type="image/webp" srcset="assets/images/placeholder.webp">
-                <img class="media__img" src="assets/images/placeholder.jpg" alt="Огляд React" width="640" height="360" loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <h3 class="news-card__title">React у навчальній програмі</h3>
-            <p class="news-card__excerpt">Після базових тем переходимо до екосистеми React та розробляємо перший компонентний інтерфейс.</p>
-            <div class="news-card__meta">
-              <time class="news-card__date" datetime="2025-09-15">15 вер 2025</time>
-              <a class="news-card__btn" href="#">Читати далі</a>
-            </div>
-          </article>
+{{#> layout
+  pageTitle="Головна"
+  pageDescription="Головна сторінка навчального лендінгу: новини та досягнення команди."
+  studentGroup="6.1213-2пі"
+  studentEmail="web-team@example.com"
+  isHomePage=true
+}}
+  <section class="news" aria-labelledby="news-title">
+    <h2 id="news-title" class="news__title">Останні новини</h2>
+    <div class="news__list">
+      <article class="news-card">
+        <figure class="news-card__media media">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/placeholder.avif" />
+            <source type="image/webp" srcset="/assets/images/placeholder.webp" />
+            <img class="media__img" src="/assets/images/placeholder.jpg" alt="Фото зі студентського заходу" width="640" height="360" loading="lazy" decoding="async" />
+          </picture>
+        </figure>
+        <h3 class="news-card__title">Старт навчального веб-проєкту</h3>
+        <p class="news-card__excerpt">Група розпочала роботу над веб-проєктом, який охопить HTML, CSS, JavaScript та сучасні фреймворки.</p>
+        <div class="news-card__meta">
+          <time class="news-card__date" datetime="2025-09-10">10 вер 2025</time>
+          <a class="news-card__btn" href="#">Читати далі</a>
         </div>
-      </section>
-    </main>
+      </article>
 
-    <footer class="footer">
-      <div class="footer__inner">
-        <p class="footer__text">© 2025 Група <span class="footer__group-name">6.1213-2пі</span></p>
-        <address class="footer__contacts" aria-label="Наші контакти">
-          <h3 class="footer__contacts-title">Наші контакти</h3>
-          <ul class="footer__contacts-list">
-            <li class="footer__contacts-item">
-              <span class="footer__label">Email:</span>
-              <a class="footer__link" href="mailto:web-team@example.com">web-team@example.com</a>
-            </li>
-            <li class="footer__contacts-item">
-              <span class="footer__label">Телефон:</span>
-              <a class="footer__link" href="tel:+380501112233">+38 (050) 111-22-33</a>
-            </li>
-            <li class="footer__contacts-item">
-              <span class="footer__label">Адреса:</span>
-              <span>Запоріжжя, вул. Університетська, 66Б</span>
-            </li>
-          </ul>
-        </address>
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
+      <article class="news-card">
+        <figure class="news-card__media media">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/placeholder.avif" />
+            <source type="image/webp" srcset="/assets/images/placeholder.webp" />
+            <img class="media__img" src="/assets/images/placeholder.jpg" alt="Практика з Flexbox та Grid" width="640" height="360" loading="lazy" decoding="async" />
+          </picture>
+        </figure>
+        <h3 class="news-card__title">Flexbox та Grid: практика</h3>
+        <p class="news-card__excerpt">На четвертій лекції розбираємо одновимірні та двовимірні лейаути й будуємо цілісний шаблон сторінки.</p>
+        <div class="news-card__meta">
+          <time class="news-card__date" datetime="2025-09-12">12 вер 2025</time>
+          <a class="news-card__btn" href="#">Читати далі</a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <figure class="news-card__media media">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/placeholder.avif" />
+            <source type="image/webp" srcset="/assets/images/placeholder.webp" />
+            <img class="media__img" src="/assets/images/placeholder.jpg" alt="Огляд React" width="640" height="360" loading="lazy" decoding="async" />
+          </picture>
+        </figure>
+        <h3 class="news-card__title">React у навчальній програмі</h3>
+        <p class="news-card__excerpt">Після базових тем переходимо до екосистеми React та розробляємо перший компонентний інтерфейс.</p>
+        <div class="news-card__meta">
+          <time class="news-card__date" datetime="2025-09-15">15 вер 2025</time>
+          <a class="news-card__btn" href="#">Читати далі</a>
+        </div>
+      </article>
+    </div>
+  </section>
+{{/layout}}
