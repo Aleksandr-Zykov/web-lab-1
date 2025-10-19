@@ -1,0 +1,44 @@
+@import "tailwindcss" source("../..");
+
+@theme static {
+  --color-brand-100: #e6eef6;
+  --color-brand-500: #002b5c;
+  --color-brand-600: #01356f;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .btn-brand {
+    @apply inline-flex items-center gap-2
+      rounded-md px-4 py-2 font-semibold
+      transition-colors transition-transform
+      bg-brand-500 text-white!
+      hover:bg-brand-600
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2
+      active:translate-y-[1px];
+  }
+
+  .card {
+    @apply flex flex-col rounded-2xl
+      border border-[var(--border)]
+      bg-[var(--surface)] shadow-[var(--shadow-1)]
+      overflow-clip;
+  }
+
+  .card__meta {
+    @apply mt-auto flex items-center justify-between
+      gap-4 p-4 border-t border-[var(--border)];
+  }
+}
