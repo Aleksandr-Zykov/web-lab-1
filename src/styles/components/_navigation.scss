@@ -43,8 +43,11 @@
   background: rgba(0, 43, 92, 0.08);
 }
 
-.nav__link--cta {
+.nav__actions {
   margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: abs.$space-3;
 }
 
 @include abs.respond(abs.$breakpoint-sm) {
