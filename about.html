@@ -4,6 +4,7 @@
   studentGroup="6.1213-2пі"
   studentEmail="web-team@example.com"
   isAboutPage=true
+  pageCode="about"
 }}
   <article class="about-article">
     <h2 class="about-article__title">Про нашу команду</h2>
@@ -30,5 +31,21 @@
       <dt class="history__term">2025</dt>
       <dd class="history__desc">Запуск навчального лендінгу в межах дисципліни</dd>
     </dl>
+  </section>
+
+  <section class="team" aria-labelledby="team-title">
+    <h3 id="team-title" class="team__title">Наша команда</h3>
+    <div class="team__list" aria-live="polite"></div>
+
+    <template id="employee-card-tpl">
+      <article class="card employee-card">
+        <img class="employee-card__photo" alt="" width="320" height="240" loading="lazy">
+        <div class="employee-card__body">
+          <h4 class="employee-card__name"></h4>
+          <p class="employee-card__role"></p>
+          <a class="btn-brand employee-card__cta" href="#" target="_blank" rel="noopener">Профіль</a>
+        </div>
+      </article>
+    </template>
   </section>
 {{/layout}}

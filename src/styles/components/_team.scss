@@ -1,0 +1,52 @@
+@use '../abstracts' as abs;
+
+.team {
+  margin-top: abs.$space-6;
+  display: grid;
+  gap: abs.$space-4;
+}
+
+.team__title {
+  margin: 0;
+  font-size: var(--fs-h2);
+  color: var(--brand);
+}
+
+.team__list {
+  display: grid;
+  gap: abs.$space-4;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.employee-card {
+  height: 100%;
+}
+
+.employee-card__photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.employee-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: abs.$space-3;
+  padding: abs.$space-4;
+  background: var(--surface);
+}
+
+.employee-card__name {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.employee-card__role {
+  margin: 0;
+  color: var(--fg-muted);
+}
+
+.employee-card__cta {
+  align-self: flex-start;
+}
