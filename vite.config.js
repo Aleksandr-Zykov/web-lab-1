@@ -8,8 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const pageContext = {
-  siteName: 'Лабораторна 7',
-  labName: 'Лабораторна № 7'
+  siteName: 'Лабораторна 8',
+  labName: 'Лабораторна № 8'
 };
 
 export default defineConfig({
